@@ -1,0 +1,59 @@
+.header-opaque {
+  background-color: $color-blackish;
+  transition: bac 0.3s ease-in;
+  border-bottom: 1px solid $color-gray-dark;
+}
+
+.header-container {
+  animation: fadeIn 3s ease-in;
+}
+
+.header-opaque,
+.header-container {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  font-size: 3rem;
+  padding: 0 3vw;
+  transition: 0.3s ease-in;
+
+  & > svg {
+    height: 75%;
+
+    & > g > path,
+    & > g > g > polygon {
+      &:first-of-type {
+        fill: $color-white;
+      }
+      &:last-of-type {
+        fill: $color-primary-dark;
+        animation: svg-color-change 10s ease infinite 2s;
+      }
+    }
+  }
+
+  & nav ul {
+    display: flex;
+
+    & li {
+      list-style: none;
+
+      & a {
+        margin: 0 2rem;
+        text-decoration: none;
+        color: $color-white;
+        font-family: $font-secondary;
+        font-size: 2.2rem;
+
+        &:hover {
+          color: salmon;
+        }
+      }
+    }
+  }
+}

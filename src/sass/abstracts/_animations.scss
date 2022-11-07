@@ -1,0 +1,91 @@
+@import './variables';
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(10rem, 6rem);
+  }
+  80% {
+    transform: translate(-1rem, 6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 6rem);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes svg-color-change {
+  0% {
+    fill: $color-primary-dark;
+  }
+  15% {
+    fill: $color-primary;
+  }
+  40% {
+    fill: $color-tertiary-light;
+  }
+  75% {
+    fill: $color-primary-light;
+  }
+  90% {
+    fill: $color-primary;
+  }
+  100% {
+    fill: $color-primary-dark;
+  }
+}
+
+@keyframes hero-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: rgba(241, 241, 241, .5);
+  }
+}
+
+@keyframes iconsIn {
+  0% {
+    width: 0;
+  }
+
+  70% {
+    width: 130%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

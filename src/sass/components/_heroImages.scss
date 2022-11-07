@@ -1,0 +1,72 @@
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  height: 31.2vh;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1566826483742-ecd40aa485d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3724&q=80");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
+
+  & > div {
+    height: 100%;
+    width: 100%;
+    background-color: $color-almost-black;
+    clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 99% 100%, 99% 8%, 82.15% 26%, 82.15% 100%,
+    80.15% 100%, 80.15% 28%, 65.55% 44%, 65.55% 100%, 63.55% 100%, 63.55% 46%, 51% 60%, 51% 100%,
+    49% 100%, 49% 60%, 36.45% 46%, 36.45% 100%, 34.45% 100%, 34.45% 44%, 19.85% 28%, 19.85% 100%,
+    17.85% 100%, 17.85% 26%, 1% 8%, 1% 100%, 0 100%);
+  }
+
+
+  & li {
+    background: rgba(247, 145, 28, .5);
+    margin: 0 1%;
+    opacity: .5;
+
+    &:hover {
+      background: $color-secondary-light;
+      opacity: 1;
+    }
+  }
+
+  &__images {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+
+
+    & li:first-of-type {
+      clip-path: polygon(0 8%, 100% 26%, 100% 100%, 0 100%);
+      min-width: 16.85%;
+    }
+
+    & li:nth-of-type(2) {
+      clip-path: polygon(0 28%, 100% 44%, 100% 100%, 0 100%);
+      min-width: 14.6%;
+    }
+
+    & li:nth-of-type(3) {
+      clip-path: polygon(0 46%, 100% 60%, 100% 100%, 0 100%);
+      min-width: 12.55%;
+    }
+
+    & li:nth-of-type(4) {
+      clip-path: polygon(0 60%, 100% 46%, 100% 100%, 0 100%);
+      min-width: 12.55%;
+    }
+
+    & li:nth-of-type(5) {
+      clip-path: polygon(0 44%, 100% 28%, 100% 100%, 0 100%);
+      min-width: 14.6%;
+    }
+
+    & li:last-of-type {
+      clip-path: polygon(0% 26%, 100% 8%, 100% 100%, 0% 100%);
+      min-width: 16.85%;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.section-hero {
+  position: relative;
+  height: 100vh;
+}
+
+.section-about,
+.section-work {
+  max-width: 90vw;
+  margin: 0 auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  &-about {
+    height: 80vh;
+  }
+
+  &-work {
+    height: 100vh;
+    background-color: darkorchid;
+    align-items: center;
+
+    p {
+      font-size: 8em;
+    }
+  }
+}
+
+.section-footer {
+  height: 30vh;
+  background: $color-blackish;
+  border-top: 1px solid $color-gray-dark;
+}
