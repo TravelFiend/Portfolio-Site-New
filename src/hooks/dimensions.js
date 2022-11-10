@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 
-function getDimensions() {
+const getDimensions = () => {
   const { innerWidth: width, innerHeight: height } = window;
   return { width, height };
 }
 
-export default function useDimensions() {
+const useDimensions = () => {
   const [dimensions, setDimensions] = useState(getDimensions());
 
   useEffect(() => {
-    function handleResize() {
+    const handleResize = () => {
       setDimensions(getDimensions());
     }
 
@@ -19,3 +19,5 @@ export default function useDimensions() {
 
   return dimensions;
 }
+
+export default useDimensions;
