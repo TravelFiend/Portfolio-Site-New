@@ -1,24 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import useScrollPosition from '../hooks/useScrollPosition';
 import { MGLogo } from '../svgs/icons';
 
-const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
 
-  const fillBackground = () => {
-    console.log({ poopy: window.scrollY });
-    return window.scrollY <= 100 ? setScrolled(true) : setScrolled(false);
-  }
+const Header = () => {
+  const { isScrolled } = useScrollPosition(150);
+  const renderCounter = useRef(0);
 
   useEffect(() => {
-    fillBackground()
-    // adding the event when scroll change Logo
-    window.addEventListener('scroll', fillBackground)
-
-    return window.removeEventListener('scroll', fillBackground)
-  }, [])
+    if (renderCounter.current === 0) {
+      renderCounter.current = renderCounter.current + 1;
+    }
+  }, [isScrolled])
 
   return (
-    <header className={scrolled ? 'header-container' : 'header-opaque'}>
+    <header className={`${renderCounter.current === 0 && ''} ${isScrolled ? 'header-opaque' : 'header-container'}`}>
       <MGLogo />
 
       <nav>
@@ -27,7 +23,7 @@ const Header = () => {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Work</a>
+            <a href="#work">Work</a>
           </li>
           <li>
             <a href="#">Contact</a>

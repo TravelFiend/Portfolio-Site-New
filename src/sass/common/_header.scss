@@ -1,11 +1,10 @@
 .header-opaque {
   background-color: $color-blackish;
-  transition: bac 0.3s ease-in;
   border-bottom: 1px solid $color-gray-dark;
 }
 
-.header-container {
-  animation: fadeIn 3s ease-in;
+.firstHeader {
+  animation: fadeIn 1s ease-in;
 }
 
 .header-opaque,

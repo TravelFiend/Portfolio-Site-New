@@ -32,9 +32,6 @@
   0% {
     opacity: 0;
   }
-  80% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
@@ -78,14 +75,28 @@
 
 @keyframes iconsIn {
   0% {
-    width: 0;
+    scale: 0;
+    opacity: 0;
   }
 
   70% {
-    width: 130%;
+    scale: 1.7;
   }
 
   100% {
-    width: 100%;
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes iconsToCorner {
+  0% {
+    position: relative;
+  }
+
+  100% {
+    position: fixed;
+    bottom: 0;
+    left: 0;
   }
 }
