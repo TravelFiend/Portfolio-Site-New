@@ -5,16 +5,17 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const fillBackground = () => {
-    console.log({ poopy: window.scrollY });
-    return window.scrollY <= 100 ? setScrolled(true) : setScrolled(false);
+    return window.scrollY <= 150 ? setScrolled(true) : setScrolled(false);
   }
 
   useEffect(() => {
-    fillBackground()
+    fillBackground();
     // adding the event when scroll change Logo
-    window.addEventListener('scroll', fillBackground)
+    window.addEventListener('scroll', () => {
+      window.scrollY <= 150 ? setScrolled(true) : setScrolled(false);
+    });
 
-    return window.removeEventListener('scroll', fillBackground)
+    return window.removeEventListener('scroll', fillBackground);
   }, [])
 
   return (
@@ -27,7 +28,7 @@ const Header = () => {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Work</a>
+            <a href="#work">Work</a>
           </li>
           <li>
             <a href="#">Contact</a>
