@@ -1,11 +1,11 @@
 {
-  "name": "Change Me Dood",
-  "short_name": "ChangeMe",
+  "name": "Mike Grace Portfolio Site",
+  "short_name": "MikeG",
   "start_url": ".",
   "id": "/",
   "display": "standalone",
   "background_color": "#89C4A1",
-  "description": "A readable Hacker News app.",
+  "description": "Mike Grace's Portfolio Site",
   "icons": [{
     "src": "assets/icons/android-icon-48x48.png",
     "sizes": "48x48",

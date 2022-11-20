@@ -28,18 +28,6 @@
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes svg-color-change {
   0% {
     fill: $color-primary-dark;
@@ -78,14 +66,16 @@
 
 @keyframes iconsIn {
   0% {
-    width: 0;
+    scale: 0;
+    opacity: 0;
   }
 
-  70% {
-    width: 130%;
+  80% {
+    scale: 1.7;
   }
 
   100% {
-    width: 100%;
+    scale: 1;
+    opacity: 1;
   }
 }

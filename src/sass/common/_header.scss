@@ -1,11 +1,6 @@
 .header-opaque {
   background-color: $color-blackish;
-  transition: bac 0.3s ease-in;
-  border-bottom: 1px solid $color-gray-dark;
-}
-
-.header-container {
-  animation: fadeIn 3s ease-in;
+  border-bottom: .1rem solid $color-primary-dark;
 }
 
 .header-opaque,
@@ -21,6 +16,10 @@
   font-size: 3rem;
   padding: 0 3vw;
   transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  -ms-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
 
   & > svg {
     height: 75%;
@@ -42,13 +41,14 @@
 
     & li {
       list-style: none;
+      display: flex;
 
       & a {
         margin: 0 2rem;
         text-decoration: none;
         color: $color-white;
         font-family: $font-secondary;
-        font-size: 2.2rem;
+        font-size: 1.8rem;
 
         &:hover {
           color: salmon;

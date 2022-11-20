@@ -1,23 +1,29 @@
 import { useState, useEffect } from 'react';
 
+
 const getScrollPosition = () => {
   const { scrollX: xPos, scrollY: yPos } = window;
   return { xPos, yPos };
 }
 
-const useScrollPosition = () => {
+const useScrollPosition = pxScrolled => {
   const [scrollPosition, setScrollPosition] = useState(getScrollPosition());
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(getScrollPosition());
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return scrollPosition;
+  useEffect(() => {
+    scrollPosition.yPos > pxScrolled ? setIsScrolled(true) : setIsScrolled(false);
+  }, [scrollPosition]);
+
+  return {scrollPosition, isScrolled};
 }
 
 export default useScrollPosition;
