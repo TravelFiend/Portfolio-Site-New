@@ -1,24 +1,10 @@
-import React, { useEffect, useRef } from 'react';
-import useScrollPosition from '../hooks/useScrollPosition';
+import React from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import HeroName from './HeroName';
 import { EmailSVG, GithubSVG, InstaSVG, LinkedInSVG } from '../svgs/icons';
 
 
 const HeroBanner = () => {
-  const renderCounter = useRef(0);
-  const { isScrolled } = useScrollPosition(150);
-
-  let doneItOnce = false;
-  useEffect(() => {
-    if (isScrolled && !doneItOnce) {
-      if (renderCounter.current === 0) {
-        renderCounter.current = renderCounter.current + 1;
-      }
-      doneItOnce = true;
-    }
-  }, [isScrolled])
-
   return (
     <ParallaxBanner className='hero-banner' layers={[
       {
@@ -33,7 +19,7 @@ const HeroBanner = () => {
       <div className="hero-banner__text">
         <HeroName />
         <h2>Software Developer</h2>
-        <div className={`${renderCounter.current === 0 && 'showSocial'} ${isScrolled ? '' : ''}`}>
+        <div className="social">
           <LinkedInSVG />
           <GithubSVG />
           <EmailSVG />

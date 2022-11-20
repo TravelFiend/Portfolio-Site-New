@@ -105,25 +105,22 @@
       font-weight: 400;
       font-family: $font-secondary;
       letter-spacing: 1rem;
-      margin-top: 50px;
+      margin-top: 5rem;
     }
 
     & div {
       display: flex;
       align-items: center;
-      height: 50px;
+      height: 5rem;
 
       & a {
         height: 80%;
         margin: 8rem 4rem 0;
 
         & svg {
-          filter: drop-shadow(0 0 5px rgba(172, 194, 204, .8));
+          filter: drop-shadow(0 0 .5rem rgba(172, 194, 204, .8));
           height: 100%;
-
-          path, polygon {
-            fill: $color-white;
-          }
+          fill: $color-white;
 
           &:nth-of-type(3) {
             height: 80%;
@@ -134,25 +131,22 @@
   }
 }
 
-.showSocial {
-  & > a:first-of-type {
-    animation: iconsIn 1s ease-in;
-    animation-delay: .5s;
+.social {
+  & > a {
+    animation: iconsIn .7s ease-in;
     animation-fill-mode: both;
-  }
-  & > a:nth-of-type(2) {
-    animation: iconsIn 1s ease-in;
-    animation-delay: .7s;
-    animation-fill-mode: both;
-  }
-  & > a:nth-of-type(3) {
-    animation: iconsIn 1s ease-in;
-    animation-delay: .9s;
-    animation-fill-mode: both;
-  }
-  & > a:last-of-type {
-    animation: iconsIn 1s ease-in;
-    animation-delay: 1.1s;
-    animation-fill-mode: both;
+
+    &:first-of-type {
+      animation-delay: .5s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: .7s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: .9s;
+    }
+    &:last-of-type {
+      animation-delay: 1.1s;
+    }
   }
 }

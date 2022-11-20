@@ -3,7 +3,7 @@ import React from 'react';
 const TextBlock = () => {
   return (
     <div className='text-block'>
-      <h2>Clean Dry Yeah buddy</h2>
+      <h2>About Me</h2>
       <p></p>
     </div>
   )

@@ -4,7 +4,7 @@ import { MGLogo } from '../svgs/icons';
 
 
 const Header = () => {
-  const { isScrolled } = useScrollPosition(150);
+  const { isScrolled } = useScrollPosition(220);
   const renderCounter = useRef(0);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Header = () => {
   }, [isScrolled])
 
   return (
-    <header className={`${renderCounter.current === 0 && ''} ${isScrolled ? 'header-opaque' : 'header-container'}`}>
+    <header className={isScrolled ? 'header-opaque' : 'header-container'}>
       <MGLogo />
 
       <nav>
