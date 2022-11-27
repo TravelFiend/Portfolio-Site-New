@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import useScrollPosition from '../hooks/useScrollPosition';
 import { MGLogo } from '../svgs/icons';
+import MGColorResume from '../../public/assets/MGColorResume.pdf';
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
             <a href="#">Contact</a>
           </li>
           <li>
-            <a href="#">Resume</a>
+            <a href={MGColorResume} target='_blank' rel='noopener noreferrer'>Resume</a>
           </li>
         </ul>
       </nav>
