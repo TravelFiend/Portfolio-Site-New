@@ -1,5 +1,3 @@
-import React from 'react';
-
 const TextBlock = () => {
   return (
     <div className='text-block'>

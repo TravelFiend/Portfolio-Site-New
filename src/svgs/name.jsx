@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const NameSmall = () => (
   <svg width="302" height="45" viewBox="0 0 302 45" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M39.9649 4.85325V43.4974H34.9496V14.6818L22.2736 43.4974H18.7464L6.01529 14.626V43.4974H1V4.85325H6.40108L20.51 36.7961L34.6189 4.85325H39.9649Z" stroke="white" strokeWidth="2"/>

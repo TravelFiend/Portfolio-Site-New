@@ -1,4 +1,3 @@
-import React from 'react';
 import useScrollPosition from '../hooks/useScrollPosition';
 import { EmailSVG, GithubSVG, InstaSVG, LinkedInSVG } from '../svgs/icons';
 

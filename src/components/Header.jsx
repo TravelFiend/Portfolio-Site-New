@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import useScrollPosition from '../hooks/useScrollPosition';
 import { MGLogo } from '../svgs/icons';
 import MGColorResume from '../../public/assets/MGColorResume.pdf';
