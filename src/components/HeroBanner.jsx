@@ -1,4 +1,3 @@
-import React from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import HeroName from './HeroName';
 import { EmailSVG, GithubSVG, InstaSVG, LinkedInSVG } from '../svgs/icons';

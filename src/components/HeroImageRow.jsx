@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 const HeroImageRow = () => {
   return (
     <div className='hero-bottom'>

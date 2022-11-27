@@ -56,6 +56,9 @@ const config = {
         },
       }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   }
 };
 
