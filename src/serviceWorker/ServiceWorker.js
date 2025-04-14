@@ -36,21 +36,21 @@ registerRoute(
   })
 );
 
-registerRoute(
-  ({url}) => url.origin === 'https://api.themoviedb.org' ||
-                  url.pathname === '/3/discover/tv',
-  new StaleWhileRevalidate({
-    cacheName: 'movie-api-response',
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200]
-      }),
-      new ExpirationPlugin({
-        maxEntries: 1
-      })
-    ]
-  })
-);
+// registerRoute(
+//   ({url}) => url.origin === 'https://api.themoviedb.org' ||
+//                   url.pathname === '/3/discover/tv',
+//   new StaleWhileRevalidate({
+//     cacheName: 'movie-api-response',
+//     plugins: [
+//       new CacheableResponsePlugin({
+//         statuses: [0, 200]
+//       }),
+//       new ExpirationPlugin({
+//         maxEntries: 1
+//       })
+//     ]
+//   })
+// );
 
 registerRoute(
   ({request}) => request.destination === 'image',

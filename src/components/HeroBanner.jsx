@@ -1,4 +1,3 @@
-import React from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import HeroName from './HeroName';
 import { EmailSVG, GithubSVG, InstaSVG, LinkedInSVG } from '../svgs/icons';
@@ -19,7 +18,7 @@ const HeroBanner = () => {
       <div className="hero-banner__text">
         <HeroName />
         <h2>Software Developer</h2>
-        <div>
+        <div className="social">
           <LinkedInSVG />
           <GithubSVG />
           <EmailSVG />

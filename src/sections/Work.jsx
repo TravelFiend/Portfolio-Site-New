@@ -1,8 +1,6 @@
-import React from 'react';
-
 const Work = () => {
   return (
-    <section className='section-work'>
+    <section id='work' className='section-work'>
       <p>WORK SECTION</p>
     </section>
   )

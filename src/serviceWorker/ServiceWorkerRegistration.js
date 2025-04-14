@@ -10,7 +10,7 @@ const registerServiceWorker = () => {
 
     wb.addEventListener('installed', e => {
       if (e.isUpdate){
-        if (confirm('New update available.  Click ok to refresh')){    //  pleace holder, replace with self-build popud or something like that
+        if (confirm('New update available.  Click ok to refresh')){    //  pleace holder, replace with self-build popup or something like that
           window.location.reload();
         }
       }

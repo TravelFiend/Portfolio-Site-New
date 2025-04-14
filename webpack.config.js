@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotEnv = require('dotenv-webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -9,6 +9,7 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 const currentTask = process.env.npm_lifecycle_event;
 
 const config = {
+  context: __dirname,
   entry: './src/index.js',
   output: {
     filename: 'bundle.[fullhash].js',
@@ -16,11 +17,11 @@ const config = {
     clean: true
   },
   plugins: [
-    new HtmlPlugin({ template: './src/index.html'}),
+    new HtmlWebpackPlugin({ template: './src/index.html'}),
     new DotEnv({ systemvars: true }),
     new CopyPlugin({ patterns: [{ from: 'public' }] })
   ],
-  devtool: 'eval-cheap-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     port: 7890,
     static: path.resolve(__dirname, 'dist'),
@@ -55,6 +56,9 @@ const config = {
         },
       }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   }
 };
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Work from '../sections/Work';
@@ -8,8 +7,10 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <About />
-      <Work />
+      <div className='body-wrapper'>
+        <About />
+        <Work />
+      </div>
     </>
   );
 };

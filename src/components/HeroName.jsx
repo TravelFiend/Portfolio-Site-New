@@ -1,6 +1,6 @@
-import React from 'react';
-import useDimensions from '../hooks/dimensions';
+import useDimensions from '../hooks/useDimensions';
 import { NameSmall, NameRegular, NameBig } from '../svgs/name';
+
 
 const HeroName = () => {
   const { width } = useDimensions();

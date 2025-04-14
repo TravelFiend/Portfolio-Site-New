@@ -1,3 +1,22 @@
 .text-block {
-  width: 50%;
+  width: 70%;
+  color: #2493A5;
+  margin: 7rem 0 7rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  h2 {
+    font-family:$font-secondary;
+    font-size: 4.1rem;
+    color: #2493A5;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-family: $font-primary;
+    font-size: 2.2rem;
+    padding-right: 3rem;
+  }
 }
