@@ -11,6 +11,10 @@ const useScrollPosition = pxScrolled => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+
+    if (getScrollPosition().yPos < 100) {
+      setIsScrolled(true);
+    }
     const handleScroll = () => {
       setScrollPosition(getScrollPosition());
     };

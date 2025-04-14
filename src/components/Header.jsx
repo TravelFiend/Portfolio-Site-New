@@ -5,7 +5,7 @@ import MGColorResume from '../../public/assets/MGColorResume.pdf';
 
 
 const Header = () => {
-  const { isScrolled } = useScrollPosition(220);
+  const { isScrolled } = useScrollPosition(100);
   const renderCounter = useRef(0);
 
   useEffect(() => {
