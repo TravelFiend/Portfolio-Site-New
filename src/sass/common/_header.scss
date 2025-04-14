@@ -49,9 +49,11 @@
         color: $color-white;
         font-family: $font-secondary;
         font-size: 1.8rem;
+        transition: .1s;
 
         &:hover {
-          color: salmon;
+          scale: 1.2;
+          transition: .2s;
         }
       }
     }

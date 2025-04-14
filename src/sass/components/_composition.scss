@@ -1,9 +1,10 @@
 .composition {
   position: relative;
-  width: 50%;
+  min-width: 50rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  right: 5rem;
 
   &__photo {
     width: 30rem;
@@ -14,21 +15,22 @@
     position: absolute;
     z-index: 2;
     transition: all .2s;
-    outline-offset: 2rem;
+    outline-offset: 1rem;
+    object-fit: cover;
 
     &--p1 {
       top: 8rem;
-      left: 0;
-    }
-
-    &--p2 {
-      top: 10rem;
       right: 0;
     }
 
-    &--p3 {
+    &--p2 {
       top: 16rem;
       left: 0;
+    }
+
+    &--p3 {
+      top: 30rem;
+      right: 0;
     }
 
     &:hover {
