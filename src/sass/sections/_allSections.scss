@@ -22,9 +22,37 @@
     margin-top: 5rem;
     background-color: darkorchid;
     align-items: center;
+    padding-right: 10rem;
 
-    p {
+    & p {
       font-size: 8em;
+    }
+  }
+
+  &-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5rem 10rem 5rem 2.4rem;
+
+    & div {
+
+      & img {
+        height: 10rem;
+        padding: 1.4rem;
+        filter: drop-shadow(0 0 .75rem $color-primary);
+        animation: growIntoPlace .3s ease forwards;
+        opacity: 0;
+      }
+
+      & p {
+        font-family: $font-secondary;
+        font-size: 2rem;
+        text-align: center;
+        color: $color-primary;
+        animation: fadeIn 1s ease forwards;
+        opacity: 0;
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 .text-block {
   width: 70%;
-  color: #2493A5;
+  color: $color-primary;
   margin: 7rem 0 7rem 2rem;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   h2 {
     font-family:$font-secondary;
     font-size: 4.1rem;
-    color: #2493A5;
+    color: $color-primary;
     margin-bottom: 2rem;
   }
 
