@@ -31,16 +31,16 @@
 @keyframes growIntoPlace {
   0% {
     opacity: 0;
-    transform: scaleY(0);
+    transform: scale(0);
     transform-origin: top;
   }
   75% {
     opacity: 1;
-    transform: scaleY(1.2);
+    transform: scale(1.2);
   }
   100% {
     opacity: 1;
-    transform: scaleY(1);
+    transform: scale(1);
   }
 }
 
