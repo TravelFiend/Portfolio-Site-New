@@ -13,16 +13,14 @@
 
 .section {
   &-about {
-    height: 80vh;
-    padding-right: 10rem;
+    padding: 0 10rem 8rem 2.4rem;
+    background-color: $color-blackish;
   }
 
   &-work {
     height: 100vh;
     margin-top: 5rem;
-    background-color: $color-tertiary-dark;
     align-items: center;
-    padding-right: 10rem;
 
     & p {
       font-size: 8em;
@@ -43,6 +41,16 @@
         filter: drop-shadow(0 0 .75rem $color-primary);
         animation: growIntoPlace .3s ease forwards;
         opacity: 0;
+      }
+
+      & .tailwindIcon {
+        width: 12rem;
+        object-fit: contain;
+      }
+
+      & .nodeIcon {
+        width: 18rem;
+        object-fit: contain;
       }
 
       & p {

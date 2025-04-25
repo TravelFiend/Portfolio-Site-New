@@ -54,7 +54,8 @@ const Technologies = () => {
             <img
               src={icon}
               alt={`${text} icon`}
-              style={{ animationDelay: `${index * .06}s` }}
+              className={`${text === 'Tailwind' ? 'tailwindIcon' : ''}${text === 'Node.js' ? 'nodeIcon' : ''}`}
+              style={{ animationDelay: `${index * .06}s`,  }}
             />
             <p style={{ animationDelay: `${index * .06}s` }}>{text}</p>
           </div>
