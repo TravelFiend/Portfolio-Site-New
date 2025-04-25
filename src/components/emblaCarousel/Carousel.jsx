@@ -31,7 +31,7 @@ const Carousel = ({ slides, options }) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi);
 
-  const setTweenFactor = useCallback((emblaApi) => {
+  const setTweenFactor = useCallback(emblaApi => {
     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
   }, []);
 
