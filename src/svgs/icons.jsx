@@ -43,7 +43,7 @@ export const GithubSVG = () => (
 );
 
 export const EmailSVG = () => (
-  <a href="mailto:mike@mikegrace.com">
+  <a href="mailto:travelfiendmail@gmail.com">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 398.9 237.52">
       <polygon points="12.29 0 385.3 0 199.47 135.27 12.29 0"/>
       <path d="M398.9,12.94L199.47,160.99,0,12.94V212.28c0,13.94,11.3,25.23,25.23,25.23H373.67c13.94,0,25.23-11.3,25.23-25.23V12.94Z"/>
