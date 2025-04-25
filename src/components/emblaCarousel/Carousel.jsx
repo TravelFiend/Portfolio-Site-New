@@ -19,6 +19,11 @@ const Carousel = ({ slides, options }) => {
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 
+  useEffect(() => {
+    console.log({ scrollSnaps });
+
+  }, [scrollSnaps])
+
   const {
     prevBtnDisabled,
     nextBtnDisabled,

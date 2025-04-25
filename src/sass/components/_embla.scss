@@ -41,7 +41,7 @@
     -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
     -webkit-appearance: none;
     appearance: none;
-    background-color: transparent;
+    background-color: $color-blackish;
     touch-action: manipulation;
     display: inline-flex;
     text-decoration: none;
@@ -54,8 +54,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+
+    &:hover {
+      background-color: $color-white;
+      -webkit-transition: background-color 200ms linear;
+      -ms-transition: background-color 200ms linear;
+      transition: background-color 200ms linear;
+    }
 
     &s {
+      margin-left: 10rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0.6rem;
@@ -63,7 +74,7 @@
     }
 
     &:disabled {
-      color: var(--detail-high-contrast);
+      color: $color-gray-dark;
     }
 
     &__svg {
@@ -96,7 +107,6 @@
       flex-wrap: wrap;
       justify-content: flex-end;
       align-items: center;
-      margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
     }
 
     &:after {
