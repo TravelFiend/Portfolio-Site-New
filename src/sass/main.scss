@@ -1,5 +1,6 @@
 @import 'abstracts/animations';
 @import 'abstracts/display';
+@import 'abstracts/mixins';
 @import 'abstracts/variables';
 
 @import 'base/base';
@@ -11,6 +12,7 @@
 @import 'components/embla';
 @import 'components/heroBanner';
 @import 'components/heroImages';
+@import 'components/slide';
 @import 'components/socialMenu';
 @import 'components/textBlock';
 

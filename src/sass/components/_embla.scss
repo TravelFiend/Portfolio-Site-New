@@ -62,14 +62,14 @@
     transition: background-color 100ms linear;
 
     &:hover {
-      background-color: $color-white;
+      background-color: $color-primary-dark;
       -webkit-transition: background-color 100ms linear;
       -ms-transition: background-color 100ms linear;
       transition: background-color 100ms linear;
     }
 
     &:active {
-      background-color: $color-secondary-light;
+      background-color: $color-primary-light;
     }
 
     &s {
