@@ -7,16 +7,29 @@
   align-items: flex-start;
   justify-content: center;
 
+  @include respond-to('md') {
+    width: 100%;
+  }
+
   h2 {
     font-family:$font-secondary;
     font-size: 4.1rem;
     color: $color-primary;
     margin-bottom: 2rem;
+
+    @include respond-to('sm') {
+      font-size: 3.2rem;
+      padding-right: 2rem;
+    }
   }
 
   p {
     font-family: $font-primary;
     font-size: 2.2rem;
     padding-right: 3rem;
+
+    @include respond-to('sm') {
+      font-size: 1.6rem;
+    }
   }
 }
