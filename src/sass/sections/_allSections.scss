@@ -13,12 +13,16 @@
   @include respond-to('sm') {
     width: calc(100vw - 6rem);
   }
+  @include respond-to('xxs') {
+    width: 100vw;
+  }
 }
 
 .section {
   &-about {
     padding: 0 10rem 8rem 2.4rem;
     background-color: $color-blackish;
+    overflow: hidden;
 
     @include respond-to('md') {
       padding: 1rem;
@@ -26,7 +30,13 @@
       flex-direction: column;
       justify-content: start;
       align-items: start;
-      min-height: 115rem;
+      min-height: 120rem;
+    }
+    @include respond-to('sm') {
+      min-height: 98rem;
+    }
+    @include respond-to('xxs') {
+      min-height: 105rem;
     }
   }
 
@@ -47,10 +57,14 @@
     padding: 5rem 10rem 5rem 2.4rem;
 
     @include respond-to('sm') {
-      padding: 1rem 1rem 1rem 0;
+      padding: 5rem 3rem 5rem 0;
+    }
+    @include respond-to('xxs') {
+      padding: 2rem;
     }
 
     & div {
+      padding: .5rem;
 
       & img {
         height: 10rem;
@@ -97,10 +111,12 @@
       }
     }
   }
-}
 
-.section-footer {
-  height: 30vh;
-  background: $color-blackish;
-  border-top: .1rem solid $color-gray-dark;
+  &-footer {
+    height: 30vh;
+    background: $color-blackish;
+    border-top: .1rem solid $color-gray-dark;
+    display: flex;
+    align-items: center;
+  }
 }

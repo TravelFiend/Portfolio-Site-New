@@ -1,7 +1,9 @@
+import SocialMenu from './SocialMenu';
+
 const Footer = () => {
   return (
     <footer className='section-footer'>
-      <p>Footer</p>
+      <SocialMenu />
     </footer>
   )
 }

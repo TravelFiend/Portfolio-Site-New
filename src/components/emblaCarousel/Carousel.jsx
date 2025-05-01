@@ -19,11 +19,6 @@ const Carousel = ({ slides, options }) => {
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 
-  useEffect(() => {
-    console.log({ scrollSnaps });
-
-  }, [scrollSnaps])
-
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -108,15 +103,13 @@ const Carousel = ({ slides, options }) => {
 
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
-            <>
-              <DotButton
-                key={index}
-                onClick={() => onDotButtonClick(index)}
-                className={'embla__dot'.concat(
-                  index === selectedIndex ? ' embla__dot--selected' : ''
-                )}
-              />
-            </>
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            />
           ))}
         </div>
       </div>
