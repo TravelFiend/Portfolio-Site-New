@@ -10,7 +10,6 @@ const Header = () => {
   const { isScrolled } = useScrollPosition(100);
   const { width } = useDimensions();
   const renderCounter = useRef(0);
-  const navLinks = useRef();
   const burger = useRef();
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const Header = () => {
   }, [isScrolled])
 
   const handleClick = ({ target }) => {
-    if(navLinks.current.contains(target) || burger.current.contains(target)) {
+    if(burger.current.contains(target)) {
       return;
     }
     return setIsShown(false);
@@ -37,7 +36,7 @@ const Header = () => {
     <header className={isScrolled ? 'header-opaque' : 'header-container'}>
       <MGLogo />
 
-      <nav ref={navLinks}>
+      <nav>
         <ul className={isShown && width < 640 ? 'mobile-nav-open' : ''}>
           <li>
             <a href="#about">About</a>
