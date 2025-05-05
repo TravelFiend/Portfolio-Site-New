@@ -1,3 +1,4 @@
+import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import html from '../../public/assets/html5.png';
 import css from '../../public/assets/css.png';
 import js from '../../public/assets/js.png';
@@ -16,12 +17,29 @@ import qunit from '../../public/assets/qunit.png';
 import react from '../../public/assets/react.png';
 import redux from '../../public/assets/redux.png';
 import sanity from '../../public/assets/sanity.png';
-import shopify from '../../public/assets/redux.png';
+import shopify from '../../public/assets/shopify.png';
 import tailwind from '../../public/assets/tailwind.png';
 import travis from '../../public/assets/travis.png';
+import { useEffect, useRef, useState } from 'react';
 
 
 const Technologies = () => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const techRef = useRef(null);
+  const { entry, setNode } = useIntersectionObserver({
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+  });
+
+  useEffect(() => {
+    setNode(techRef.current);
+
+    if (entry.isIntersecting && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [entry.isIntersecting, hasAnimated, setNode]);
+
   const techIcons = [
     { icon: html, text: 'HTML' },
     { icon: css, text: 'CSS'} ,
@@ -47,17 +65,22 @@ const Technologies = () => {
   ];
 
   return (
-    <div id="technologies" className="section-technologies">
+    <div id="technologies" className="section-technologies" ref={techRef}>
       {techIcons.map(({icon, text}, index) => {
         return (
           <div key={index}>
             <img
               src={icon}
               alt={`${text} icon`}
-              className={`${text === 'Tailwind' ? 'tailwindIcon' : ''}${text === 'Node.js' ? 'nodeIcon' : ''}`}
-              style={{ animationDelay: `${index * .06}s`,  }}
+              className={`${text === 'Tailwind' ? 'tailwindIcon' : ''}${text === 'Node.js' ? 'nodeIcon' : ''} ${hasAnimated ? 'animate' : ''}`}
+              style={{ animationDelay: `${index * .06}s` }}
             />
-            <p style={{ animationDelay: `${index * .06}s` }}>{text}</p>
+            <p
+              className={hasAnimated ? 'animate' : ''}
+              style={{ animationDelay: `${index * .06}s` }}
+            >
+              {text}
+            </p>
           </div>
         )
       })}
