@@ -19,6 +19,11 @@
     17.85% 100%, 17.85% 26%, 1% 8%, 1% 100%, 0 100%);
   }
 
+  & .hovered0 {
+    background: $color-primary-dark;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
   & .hovered1 {
     background: $color-primary-dark;
     opacity: 1;
@@ -41,11 +46,6 @@
   }
   & .hovered5 {
     background: $color-primary;
-    opacity: 1;
-    transition: all 0.3s ease;
-  }
-  & .hovered6 {
-    background: $color-primary-light;
     opacity: 1;
     transition: all 0.3s ease;
   }
