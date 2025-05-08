@@ -29,6 +29,7 @@
 
   &__hide {
     transform: translateY(40%);
+    z-index: -1;
   }
 
   & > a {
