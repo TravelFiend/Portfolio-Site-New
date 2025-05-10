@@ -13,7 +13,11 @@ const About = () => {
   return (
     <section id='about' className='section-about'>
       <TextBlock header={textContent.header} description={textContent.body} />
-      <Composition pic1={mikeCamel} pic2={mikeMountain} pic3={mikeLaos} />
+      <Composition
+        pic1={{image: mikeCamel, alt: 'Mike on a Camel'}}
+        pic2={{image: mikeMountain, alt: 'Mike in the mountains'}}
+        pic3={{image: mikeLaos, alt: 'Mike in Laos'}}
+      />
     </section>
   );
 }
