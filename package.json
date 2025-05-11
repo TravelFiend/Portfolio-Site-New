@@ -1,7 +1,7 @@
 {
   "name": "portfolio-site-version-2",
   "version": "0.0.1",
-  "description": "",
+  "description": "An updated portfolio site for me, Mike Grace.",
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
