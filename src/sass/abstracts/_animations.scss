@@ -184,7 +184,6 @@
   position: absolute;
   width: 2rem;
   height: 100%;
-
   animation: travel 4.8s linear infinite alternate;
 }
 
@@ -194,14 +193,13 @@
   height: 2rem;
   background: $color-primary;
   border-radius: 1rem;
-
   animation: bounce 2s linear infinite;
 }
+
 #traveler2 {
   position: absolute;
   width: 2rem;
   height: 100%;
-
   animation: travel2 4.8s linear infinite alternate;
 }
 
@@ -211,6 +209,5 @@
   height: 2rem;
   background: $color-tertiary;
   border-radius: 1rem;
-
   animation: bounce2 2s linear infinite;
 }
