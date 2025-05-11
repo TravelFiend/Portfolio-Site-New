@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;1,200&display=swap');
-
-
 .hero-banner {
   position: relative;
   top: 0;
@@ -105,31 +102,48 @@
       margin-top: 5rem;
     }
 
-    & div {
-      display: flex;
-      align-items: center;
-      height: 5rem;
-
-      & a {
-        height: 80%;
-        margin: 8rem 4rem 0;
-
-        & svg {
-          filter: drop-shadow(0 0 .5rem rgba(172, 194, 204, .8));
-          height: 100%;
-          fill: $color-white;
-
-          &:nth-of-type(3) {
-            height: 80%;
-          }
-        }
+    @include respond-to('xs') {
+      & h2 {
+        font-size: 2.4rem;
+        letter-spacing: .5rem;
       }
     }
   }
 }
 
 .social {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+
   & > a {
+    height: 80%;
+    margin: 8rem 4rem 0;
+
+    & svg {
+      filter: drop-shadow(0 0 .5rem rgba(172, 194, 204, .8));
+      height: 100%;
+      fill: $color-white;
+      transition: .1s;
+      -o-transition: .1s;
+      -ms-transition: .1s;
+      -moz-transition: .1s;
+      -webkit-transition: .1s;
+
+      &:nth-of-type(3) {
+        height: 80%;
+      }
+
+      &:hover {
+        scale: 1.2;
+        transition: .2s;
+        -o-transition: .2s;
+        -ms-transition: .2s;
+        -moz-transition: .2s;
+        -webkit-transition: .2s;
+      }
+    }
+
     animation: iconsIn .7s ease-in;
     animation-fill-mode: both;
 
@@ -145,5 +159,13 @@
     &:last-of-type {
       animation-delay: 1.1s;
     }
+
+    @include respond-to('xs'){
+      margin: 8rem 2rem 0;
+    }
+  }
+
+  @include respond-to('xs'){
+    height: 3rem;
   }
 }

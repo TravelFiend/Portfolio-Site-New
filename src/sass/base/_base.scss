@@ -18,4 +18,11 @@ body {
 
 .body-wrapper {
   padding-left: 8rem;
+
+  @include respond-to('sm') {
+    padding-left: 6rem;
+  }
+  @include respond-to('xxs') {
+    padding-left: 0;
+  }
 }

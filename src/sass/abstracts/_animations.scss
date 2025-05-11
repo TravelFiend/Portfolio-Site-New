@@ -28,6 +28,31 @@
   }
 }
 
+@keyframes growIntoPlace {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top;
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes svg-color-change {
   0% {
     fill: $color-primary-dark;
@@ -69,13 +94,120 @@
     scale: 0;
     opacity: 0;
   }
-
   80% {
     scale: 1.7;
   }
-
   100% {
     scale: 1;
     opacity: 1;
   }
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    bottom: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    bottom: 0;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 20rem;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes bounce2 {
+  0%, 100% {
+    bottom: 20rem;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 0;
+    animation-timing-function: ease-in;
+  }
+}
+
+@-webkit-keyframes travel {
+  0%, 100% {
+    left: 0;
+  }
+  50% {
+    left: 88vw;
+  }
+}
+
+@keyframes travel {
+  0%, 100% {
+    left: 0;
+  }
+  50% {
+    left: 88vw;
+  }
+}
+
+@-webkit-keyframes travel2 {
+  0%, 100% {
+    left:88vw;
+  }
+  50% {
+    left: 0;
+  }
+}
+
+@keyframes travel2 {
+  0%, 100% {
+    left: 88vw;
+  }
+  50% {
+    left: 0;
+  }
+}
+
+#stage {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  background: $color-blackish;
+}
+
+#traveler {
+  position: absolute;
+  width: 2rem;
+  height: 100%;
+  animation: travel 4.8s linear infinite alternate;
+}
+
+#bouncer {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: $color-primary;
+  border-radius: 1rem;
+  animation: bounce 2s linear infinite;
+}
+
+#traveler2 {
+  position: absolute;
+  width: 2rem;
+  height: 100%;
+  animation: travel2 4.8s linear infinite alternate;
+}
+
+#bouncer2 {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: $color-tertiary;
+  border-radius: 1rem;
+  animation: bounce2 2s linear infinite;
 }
