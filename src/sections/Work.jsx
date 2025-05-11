@@ -1,30 +1,21 @@
-import covrLettr from '../../public/assets/covrLettr.jpg';
-import dansk from '../../public/assets/dansk-homepage.png';
-import food52 from '../../public/assets/food52-homepage.png';
-import kit from '../../public/assets/kit.jpg';
-import nmConnect from '../../public/assets/nmConnect.png';
-import notableNotes from '../../public/assets/notableNotes.jpg';
-import offbeat from '../../public/assets/offbeat.png';
-import schoolhouse from '../../public/assets/schoolhouse-homepage.png';
-import Carousel from '../components/emblaCarousel/Carousel';
 import WorkItems from '../components/WorkItems';
 
 const workItems = [
   {
     linkText: 'Schoolhouse',
-    image: schoolhouse,
+    image: '/assets/schoolhouse-homepage.png',
     url: 'https://www.schoolhouse.com/'
-  },{
+  }, {
     linkText: 'Food52',
-    image: food52,
+    image: '/assets/food52-homepage.png',
     url: 'https://www.food52.com/'
-  },{
+  }, {
     linkText: 'Dansk',
-    image: dansk,
+    image: '/dansk-homepage.png',
     url: 'https://www.dansk.com/'
-  },{
+  }, {
     linkText: 'NMConnect',
-    image: nmConnect,
+    image: '/assets/nmConnect.png',
     url: 'https://nmcrisisline.com/nmconnect-app/'
   }
 ];
@@ -32,26 +23,26 @@ const workItems = [
 const projectItems = [
   {
     linkText: 'CovrLettr',
-    image: covrLettr,
+    image: '/assets/covrLettr.jpg',
     url: 'https://covrlettr.netlify.app/userauth',
     repoUrl: 'https://github.com/covrLettr'
-  },{
+  }, {
     linkText: 'KIT (Keep In Touch)',
-    image: kit,
+    image: '/assets/kit.jpg',
     url: 'https://friendlier-staging.netlify.app/about',
     repoUrl: 'https://github.com/band-m'
-  },{
+  }, {
     linkText: 'Notable Notes',
-    image: notableNotes,
+    image: '/assets/notableNotes.jpg',
     url: '',
     repoUrl: 'https://github.com/TravelFiend/full-stack-with-mongo'
-  },{
+  }, {
     linkText: 'Offbeat',
-    image: offbeat,
+    image: '/assets/offbeat.png',
     url: 'https://travelfiend.github.io/offbeat/',
     repoUrl: 'https://github.com/TravelFiend/offbeat'
   }
-]
+];
 
 const Work = () => {
   return (

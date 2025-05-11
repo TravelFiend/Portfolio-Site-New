@@ -12,7 +12,7 @@ const SocialMenu = () => {
       <EmailSVG />
       <InstaSVG />
     </div>
-  )
+  );
 };
 
 export default SocialMenu;

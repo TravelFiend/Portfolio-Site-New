@@ -23,11 +23,11 @@ const HeroImageRow = () => {
             >
               <img src={hoverImages[idx]} alt={`Hero Image ${idx}`} />
             </li>
-          )
+          );
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default HeroImageRow;

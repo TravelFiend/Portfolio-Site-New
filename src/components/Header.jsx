@@ -23,10 +23,10 @@ const Header = () => {
     if (renderCounter.current === 0) {
       renderCounter.current = renderCounter.current + 1;
     }
-  }, [isScrolled])
+  }, [isScrolled]);
 
   const handleClick = ({ target }) => {
-    if(burger.current.contains(target)) {
+    if (burger.current.contains(target)) {
       return;
     }
     return setIsShown(false);
@@ -59,7 +59,7 @@ const Header = () => {
         <div className="line3"></div>
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

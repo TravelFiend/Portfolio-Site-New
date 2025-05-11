@@ -3,7 +3,7 @@ const WorkItems = ({ title, workItems }) => {
     <div className="workItems">
       <h2>{title}</h2>
       <div >
-        {workItems.map(({ linkText, image, url}) => (
+        {workItems.map(({ linkText, image, url }) => (
           <div key={linkText}>
             <a href={url} target="_blank" rel="noopener noreferrer">
               <p>{linkText}</p>

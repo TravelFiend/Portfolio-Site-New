@@ -1,7 +1,7 @@
 const Composition = ({ pic1, pic2, pic3 }) => {
   return (
     <div className="composition">
-      {[pic1, pic2, pic3].map(({image, alt}, idx) => (
+      {[pic1, pic2, pic3].map(({ image, alt }, idx) => (
         <img
           key={alt}
           src={image}

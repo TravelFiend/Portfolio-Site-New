@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import useCarousel from 'embla-carousel-react';
 import {
   NextButton,
@@ -27,7 +27,7 @@ const Carousel = ({ slides, options }) => {
   } = usePrevNextButtons(emblaApi);
 
   const setTweenFactor = useCallback(emblaApi => {
-    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
+    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length;
   }, []);
 
   const tweenOpacity = useCallback((emblaApi, eventName) => {
@@ -57,14 +57,14 @@ const Carousel = ({ slides, options }) => {
                 diffToTarget = scrollSnap + (1 - scrollProgress);
               }
             }
-          })
+          });
         }
 
         const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
         const opacity = numberWithinRange(tweenValue, 0, 1).toString();
         emblaApi.slideNodes()[slideIndex].style.opacity = opacity;
-      })
-    })
+      });
+    });
   }, []);
 
   useEffect(() => {

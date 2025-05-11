@@ -26,7 +26,7 @@ const HeroBanner = () => {
         </div>
       </div>
     </ParallaxBanner>
-  )
-}
+  );
+};
 
 export default HeroBanner;
