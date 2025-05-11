@@ -42,11 +42,11 @@ const Technologies = () => {
 
   const techIcons = [
     { icon: html, text: 'HTML' },
-    { icon: css, text: 'CSS'} ,
+    { icon: css, text: 'CSS' },
     { icon: js, text: 'Javascript' },
     { icon: node, text: 'Node.js' },
-    { icon: express, text: 'Express.js'},
-    { icon: git, text: 'Git'},
+    { icon: express, text: 'Express.js' },
+    { icon: git, text: 'Git' },
     { icon: github, text: 'Github' },
     { icon: heroku, text: 'Heroku' },
     { icon: jest, text: 'Jest' },
@@ -66,7 +66,7 @@ const Technologies = () => {
 
   return (
     <div id="technologies" className="section-technologies" ref={techRef}>
-      {techIcons.map(({icon, text}, index) => {
+      {techIcons.map(({ icon, text }, index) => {
         return (
           <div key={index}>
             <img
@@ -82,7 +82,7 @@ const Technologies = () => {
               {text}
             </p>
           </div>
-        )
+        );
       })}
     </div>
   );
