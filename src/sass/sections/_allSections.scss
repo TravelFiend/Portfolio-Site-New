@@ -146,6 +146,10 @@
         height: 100%;
         animation: travel 4.8s linear infinite alternate;
 
+        @include respond-to('xxs') {
+          animation: travel-small 4.8s linear infinite alternate;
+        }
+
         & .bouncer {
           position: absolute;
           width: 2rem;
@@ -161,6 +165,10 @@
         width: 2rem;
         height: 100%;
         animation: travel2 4.8s linear infinite alternate;
+
+        @include respond-to('xxs') {
+          animation: travel2-small 4.8s linear infinite alternate;
+        }
 
         & .bouncer2 {
           position: absolute;

@@ -141,7 +141,7 @@
     left: 0;
   }
   50% {
-    left: 96%;
+    left: 99%;
   }
 }
 
@@ -150,11 +150,47 @@
     left: 0;
   }
   50% {
-    left: 96%;
+    left: 99%;
   }
 }
 
 @-webkit-keyframes travel2 {
+  0%, 100% {
+    left: 99%;
+  }
+  50% {
+    left: 0;
+  }
+}
+
+@keyframes travel2 {
+  0%, 100% {
+    left: 99%;
+  }
+  50% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes travel-small {
+  0%, 100% {
+    left: 0;
+  }
+  50% {
+    left: 96%;
+  }
+}
+
+@keyframes travel-small {
+  0%, 100% {
+    left: 0;
+  }
+  50% {
+    left: 96%;
+  }
+}
+
+@-webkit-keyframes travel2-small {
   0%, 100% {
     left: 96%;
   }
@@ -163,7 +199,7 @@
   }
 }
 
-@keyframes travel2 {
+@keyframes travel2-small {
   0%, 100% {
     left: 96%;
   }
