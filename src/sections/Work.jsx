@@ -11,7 +11,7 @@ const workItems = [
     url: 'https://www.food52.com/'
   }, {
     linkText: 'Dansk',
-    image: '/dansk-homepage.png',
+    image: '/assets/dansk-homepage.png',
     url: 'https://www.dansk.com/'
   }, {
     linkText: 'NMConnect',

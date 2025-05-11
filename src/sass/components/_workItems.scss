@@ -3,15 +3,11 @@
   flex-direction: column;
 
   & > h2 {
-    font-size: 8rem;
+    font-size: 6rem;
     color: $color-primary;
     font-family: $font-secondary;
     text-align: center;
     margin-top: 5rem;
-
-    @include respond-to('md') {
-      font-size: 6rem;
-    }
 
     @include respond-to('xs') {
       font-size: 3.5rem;
@@ -20,7 +16,7 @@
   }
 
   & > div {
-    padding: 0 7rem 10rem;
+    padding: 0 5rem 10rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -37,61 +33,70 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
 
-      & > a {
-        width: 85%;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  &__item {
+    width: 85%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        @include respond-to('xs') {
-          width: 100%;
-        }
+    @include respond-to('xs') {
+      width: 100%;
+    }
 
-        & > p {
-          width: fit-content;
-          font-size: 3.5rem;
-          color: $color-white;
-          font-family: $font-primary;
-          text-align: center;
-          padding: 4rem 0;
-          margin-top: 5rem;
+    & > a:last-of-type {
+      display: flex;
+      align-items: center;
+
+      & > img {
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover{
+          box-shadow: 0 0 1rem $color-tertiary;
           transition: all 0.3s ease;
-
-          @include respond-to('xs') {
-            margin-top: 1rem;
-            padding: 2rem 0;
-          }
-
-          &:hover{
-            color: $color-tertiary-light;
-            scale: 1.05;
-            transition: all 0.3s ease;
-          }
-
-          @include respond-to('md') {
-            font-size: 3rem;
-          }
-
-          @include respond-to('xs') {
-            font-size: 2.5rem;
-          }
         }
+      }
+    }
 
-        & > img {
-          align-self: center;
-          justify-self: center;
-          width: 100%;
-          height: auto;
-          border-radius: 1rem;
-          transition: all 0.3s ease;
+    & > a:first-of-type {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: $color-white;
+      font-size: 3rem;
+      font-family: $font-secondary;
+      text-align: center;
+      padding: 4rem 0;
+      margin-top: 5rem;
+      transition: all 0.3s ease;
 
-          &:hover{
-            box-shadow: 0 0 1rem $color-tertiary;
-            transition: all 0.3s ease;
-          }
-        }
+      &:hover{
+        color: $color-tertiary-light;
+        scale: 1.05;
+        transition: all 0.3s ease;
+      }
+
+      & > img {
+        height: 4rem;
+        margin-left: 1rem;
+        filter: drop-shadow(0 0 .75rem $color-primary);
+      }
+
+      @include respond-to('xs') {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        padding: 2rem 0;
       }
     }
   }
