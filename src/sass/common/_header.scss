@@ -78,7 +78,6 @@
         & a {
           margin: 0 2rem;
           text-decoration: none;
-          color: $color-white;
           font-family: $font-secondary;
           font-size: 1.8rem;
           transition: .1s;
@@ -119,9 +118,40 @@
             }
           }
         }
+
+        &:last-of-type a {
+          &:hover {
+            color: $color-primary-dark;
+            transition: .2s;
+            -o-transition: .2s;
+            -ms-transition: .2s;
+            -moz-transition: .2s;
+            -webkit-transition: .2s;
+
+            @include respond-to('xs') {
+              color: $color-blackish;
+              background: $color-primary;
+              border: .1rem solid $color-blackish;
+              scale: 1.1;
+              transition: .5s;
+              -o-transition: .5s;
+              -ms-transition: .5s;
+              -moz-transition: .5s;
+              -webkit-transition: .5s;
+            }
+          }
+        }
       }
     }
   }
+}
+
+.greenResume {
+  color: $color-primary
+}
+
+.whiteResume {
+  color: $color-white
 }
 
 .burger {

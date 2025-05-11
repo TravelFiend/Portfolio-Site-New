@@ -8,6 +8,7 @@ import useDimensions from '../hooks/useDimensions';
 const Header = () => {
   const [isShown, setIsShown] = useState(false);
   const { isScrolled } = useScrollPosition(100);
+  const [it, setIt] = useState(false);
   const { width } = useDimensions();
   const renderCounter = useRef(0);
   const burger = useRef();
@@ -23,6 +24,8 @@ const Header = () => {
     if (renderCounter.current === 0) {
       renderCounter.current = renderCounter.current + 1;
     }
+
+    return isScrolled ? setIt(true) : setIt(false);
   }, [isScrolled]);
 
   const handleClick = ({ target }) => {
@@ -39,16 +42,13 @@ const Header = () => {
       <nav>
         <ul className={isShown && width < 640 ? 'mobile-nav-open' : ''}>
           <li>
-            <a href="#about">About</a>
+            <a className="whiteResume" href="#about">About</a>
           </li>
           <li>
-            <a href="#work">Work</a>
+            <a className="whiteResume" href="#work">Work</a>
           </li>
           <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href={MGColorResume} target='_blank' rel='noopener noreferrer'>Resume</a>
+            <a className={it ? 'greenResume' : 'whiteResume'} href={MGColorResume} target='_blank' rel='noopener noreferrer'>Resume</a>
           </li>
         </ul>
       </nav>
