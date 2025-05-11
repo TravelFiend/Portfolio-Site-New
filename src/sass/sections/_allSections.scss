@@ -47,8 +47,18 @@
 
     & > .work-text {
       background-color: $color-blackish;
-      width: 100vw;
-      padding: 3rem;
+      width: calc(100vw - 8rem);
+      padding: 1rem 1rem 1rem 2.4rem;
+
+      @include respond-to('md') {
+        padding: 1rem;
+      }
+      @include respond-to('sm') {
+        width: calc(100vw - 6rem);
+      }
+      @include respond-to('xxs') {
+        width: 100vw;
+      }
     }
   }
 
