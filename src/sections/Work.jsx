@@ -1,4 +1,5 @@
 import WorkItems from '../components/WorkItems';
+import TextBlock from '../components/TextBlock';
 
 const workItems = [
   {
@@ -48,6 +49,7 @@ const Work = () => {
   return (
     <section id="work" className="section-work">
       <WorkItems workItems={workItems} title="Professional Work" />
+      <TextBlock header="Stuff I'm working on" description="Talk about the tech being used in current side projects" />
       <WorkItems workItems={projectItems} title="Personal Projects" />
     </section>
   );
