@@ -44,6 +44,12 @@
     margin-top: 5rem;
     align-items: center;
     flex-direction: column;
+
+    & > .work-text {
+      background-color: $color-blackish;
+      width: 100vw;
+      padding: 3rem;
+    }
   }
 
   &-technologies {

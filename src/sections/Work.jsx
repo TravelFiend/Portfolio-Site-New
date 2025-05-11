@@ -49,7 +49,9 @@ const Work = () => {
   return (
     <section id="work" className="section-work">
       <WorkItems workItems={workItems} title="Professional Work" />
-      <TextBlock header="Stuff I'm working on" description="Talk about the tech being used in current side projects" />
+      <div className="work-text">
+        <TextBlock header="Stuff I'm working on" description="Talk about the tech being used in current side projects" />
+      </div>
       <WorkItems workItems={projectItems} title="Personal Projects" />
     </section>
   );
