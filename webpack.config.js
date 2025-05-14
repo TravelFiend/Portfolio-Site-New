@@ -17,7 +17,7 @@ const config = {
     clean: true
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html'}),
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
     new DotEnv({ systemvars: true }),
     new CopyPlugin({ patterns: [{ from: 'public' }] })
   ],

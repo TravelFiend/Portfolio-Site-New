@@ -1,14 +1,8 @@
 import { useState } from 'react';
-import chefchauen from '../../public/assets/chefchauen.jpg';
-import angkor from '../../public/assets/angkor.jpg';
-import palawan from '../../public/assets/palawan.jpg';
-import bike from '../../public/assets/bike.jpg';
-import sunset from '../../public/assets/sunset.jpg';
-import cathedral from '../../public/assets/cathedral.jpg';
 
 const HeroImageRow = () => {
   const [hoverClass, setHoverClass] = useState('');
-  const hoverImages = [chefchauen, palawan, bike, sunset, angkor, cathedral];
+  const hoverImages = ['chefchauen', 'palawan', 'bike', 'sunset', 'angkor', 'cathedral'];
 
   return (
     <div className='hero-bottom'>
@@ -21,7 +15,11 @@ const HeroImageRow = () => {
               onMouseEnter={() => setHoverClass(`hovered${idx}`)}
               onMouseLeave={() => setHoverClass('')}
             >
-              <img src={hoverImages[idx]} alt={`Hero Image ${idx}`} />
+              <picture>
+                <source srcSet={`/assets/${hoverImages[idx]}.webp`} type="image/webp" />
+                <source srcSet={`/assets/${hoverImages[idx]}.jpg`} type="image/jpeg" />
+                <img src={`/assets/${hoverImages[idx]}.jpg`} alt={`Image of Mike: ${hoverImages[idx]}`} />
+              </picture>
             </li>
           );
         })}
