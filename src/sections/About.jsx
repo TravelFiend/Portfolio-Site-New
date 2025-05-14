@@ -1,8 +1,5 @@
 import Composition from '../components/Composition';
 import TextBlock from '../components/TextBlock';
-import mikeMountain from '../../public/assets/mike-in-mountain.jpg';
-import mikeLaos from '../../public/assets/mike-in-laos.jpg';
-import mikeCamel from '../../public/assets/mike-on-a-camel.jpg';
 
 
 const About = () => {
@@ -18,9 +15,9 @@ const About = () => {
       </div>
 
       <Composition
-        pic1={{ image: mikeCamel, alt: 'Mike on a Camel' }}
-        pic2={{ image: mikeMountain, alt: 'Mike in the mountains' }}
-        pic3={{ image: mikeLaos, alt: 'Mike in Laos' }}
+        pic1={{ image: 'mike-on-a-camel', alt: 'Mike on a Camel' }}
+        pic2={{ image: 'mike-in-mountain', alt: 'Mike in the mountains' }}
+        pic3={{ image: 'mike-in-laos', alt: 'Mike in Laos' }}
       />
     </section>
   );

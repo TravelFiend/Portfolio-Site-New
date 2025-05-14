@@ -4,12 +4,14 @@ const Composition = ({ pic1, pic2, pic3 }) => {
   return (
     <div className="composition">
       {[pic1, pic2, pic3].map(({ image, alt }, idx) => (
-        <img
+        <picture
           key={alt}
-          src={image}
-          alt={alt}
-          className={`composition__photo composition__photo--p${idx + 1}`}
-        />
+          className="composition__photo"
+        >
+          <source srcSet={`/assets/${image}.webp`} type="image/webp" />
+          <source srcSet={`/assets/${image}.jpg`} type="image/jpeg" />
+          <img className={`composition__image composition__photo--p${idx + 1}`} src={`/assets/${image}.jpg`} alt={alt} />
+        </picture>
       ))}
     </div>
   );

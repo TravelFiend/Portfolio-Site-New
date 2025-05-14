@@ -50,10 +50,12 @@ const config = {
         ]
       },
       {
-        test: /\.(jpeg|jpg|png|svg|pdf)$/,
-        use: {
-          loader: 'file-loader?name=.public/assets/images/[name].[ext]'
-        },
+        test: /\.(jpeg|jpg|png|svg|webp|pdf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+          publicPath: '/'
+        }
       }
     ]
   },
