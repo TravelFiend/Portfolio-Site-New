@@ -1,5 +1,5 @@
 .text-block {
-  width: 100%;
+  width: 97%;
   color: $color-primary;
   margin: 7rem 0 7rem 2rem;
   display: flex;
@@ -7,11 +7,7 @@
   align-items: flex-start;
   justify-content: center;
 
-  @include respond-to('md') {
-    width: 100%;
-  }
   @include respond-to('xxs') {
-    width: 97%;
     margin: 7rem 2rem;
     max-width: 100vw;
   }

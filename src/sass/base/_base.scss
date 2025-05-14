@@ -17,6 +17,7 @@ body {
 }
 
 .body-wrapper {
+  overflow-x: hidden;
   padding-left: 8rem;
 
   @include respond-to('sm') {
