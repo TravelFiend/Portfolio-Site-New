@@ -106,11 +106,11 @@
 @-webkit-keyframes bounce {
   0%, 100% {
     bottom: 0;
-    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   50% {
-    bottom: 220px;
-    -webkit-animation-timing-function: ease-in;
+    bottom: 90%;
+    animation-timing-function: ease-in;
   }
 }
 
@@ -121,6 +121,17 @@
   }
   50% {
     bottom: 90%;
+    animation-timing-function: ease-in;
+  }
+}
+
+@-webkit-keyframes bounce2 {
+  0%, 100% {
+    bottom: 90%;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 0;
     animation-timing-function: ease-in;
   }
 }
@@ -177,7 +188,7 @@
     left: 0;
   }
   50% {
-    left: 96%;
+    left: 94.5%;
   }
 }
 
@@ -186,13 +197,13 @@
     left: 0;
   }
   50% {
-    left: 96%;
+    left: 94.5%;
   }
 }
 
 @-webkit-keyframes travel2-small {
   0%, 100% {
-    left: 96%;
+    left: 94.5%;
   }
   50% {
     left: 0;
@@ -201,7 +212,7 @@
 
 @keyframes travel2-small {
   0%, 100% {
-    left: 96%;
+    left: 94.5%;
   }
   50% {
     left: 0;

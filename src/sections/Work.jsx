@@ -42,7 +42,7 @@ const projectItems = [
     linkText: 'Notable Notes',
     image: '/assets/notableNotes.jpg',
     url: '',
-    description: '',
+    description: 'Notes Nigger',
     repoUrl: 'https://github.com/TravelFiend/full-stack-with-mongo'
   }, {
     linkText: 'Offbeat',

@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types';
 
-const ProjectInfoModule = ({ shown, projectName, description, closeModule }) => {
-  if (!shown) {
-    return null;
-  }
-
+const ProjectInfoModule = ({ projectName, description, closeModule }) => {
   return (
     <div className="project-info">
       <div className="project-info__close" onClick={closeModule}/>
@@ -18,7 +14,6 @@ const ProjectInfoModule = ({ shown, projectName, description, closeModule }) => 
 };
 
 ProjectInfoModule.propTypes = {
-  shown: PropTypes.bool.isRequired,
   projectName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   closeModule: PropTypes.func.isRequired

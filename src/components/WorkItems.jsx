@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ProjectInfoModule from './ProjectInfoModule';
 
 const WorkItems = ({ title, workItems }) => {
-  const [isShowingInfo, setIsShowingInfo] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   return (
     <div className="workItems">
@@ -11,18 +11,19 @@ const WorkItems = ({ title, workItems }) => {
       <div>
         {workItems.map(({ linkText, image, url, repoUrl, description }) => (
           <Fragment key={linkText}>
-            <ProjectInfoModule
-              shown={isShowingInfo}
-              projectName={linkText}
-              description={description}
-              closeModule={() => setIsShowingInfo(false)}
-            />
+            {selectedItem === linkText ? (
+              <ProjectInfoModule
+                projectName={linkText}
+                description={description}
+                closeModule={() => setSelectedItem(null)}
+              />
+            ) : null}
 
             <div>
               <div className="workItems__item">
                 <div>
                   <p>{linkText}</p>
-                  <button type="button" onClick={() => setIsShowingInfo(true)}>INFO</button>
+                  <button type="button" onClick={() => setSelectedItem(linkText)}>INFO</button>
                   <a href={repoUrl ? repoUrl : url} target="_blank" rel="noopener noreferrer">
                     {repoUrl ? (
                       <img src="/assets/github.png" alt={`Link to ${linkText} project repo`} />
