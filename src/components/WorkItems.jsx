@@ -1,6 +1,7 @@
 import { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ProjectInfoModule from './ProjectInfoModule';
+import { GithubButton, InfoButton } from './icons';
 
 const WorkItems = ({ title, workItems }) => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -23,10 +24,13 @@ const WorkItems = ({ title, workItems }) => {
               <div className="workItems__item">
                 <div>
                   <p>{linkText}</p>
-                  <button type="button" onClick={() => setSelectedItem(linkText)}>INFO</button>
+                  <div onClick={() => setSelectedItem(linkText)}>
+                    <InfoButton />
+                  </div>
+
                   <a href={repoUrl ? repoUrl : url} target="_blank" rel="noopener noreferrer">
                     {repoUrl ? (
-                      <img src="/assets/github.png" alt={`Link to ${linkText} project repo`} />
+                      <GithubButton />
                     ) : null}
                   </a>
                 </div>

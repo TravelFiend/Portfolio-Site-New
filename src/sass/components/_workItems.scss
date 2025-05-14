@@ -82,16 +82,31 @@
       margin-top: 5rem;
       transition: all 0.3s ease;
 
-      &:hover{
-        color: $color-tertiary-light;
-        scale: 1.05;
-        transition: all 0.3s ease;
+
+      & > a,
+      & > div {
+        display: flex;
+        cursor: pointer;
       }
 
-      & > a > img {
+      & > a > svg,
+      & > div > svg {
         height: 4rem;
         margin-left: 1rem;
-        filter: drop-shadow(0 0 .75rem $color-primary);
+        transition: all 0.3s ease;
+
+        &:hover {
+          scale: 1.2;
+          transition: all 0.3s ease;
+        }
+
+        & > g > g > path {
+          fill: $color-white;
+        }
+
+        @include respond-to('xxs') {
+          height: 3rem;
+        }
       }
 
       @include respond-to('xs') {

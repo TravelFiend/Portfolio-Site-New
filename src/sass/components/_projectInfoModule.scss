@@ -8,8 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba($color-blackish, .3);
-  backdrop-filter: blur(0.1rem);
+  background-color: rgba($color-blackish, .7);
+  backdrop-filter: blur(0.2rem);
 
   &__close {
     position: absolute;
@@ -21,11 +21,11 @@
   &__content {
     position: relative;
     width: 80%;
-    height: 80%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    background-color: $color-primary;
-    padding: 2rem;
+    background-color: $color-primary-dark;
+    padding: 4rem;
     border-radius: 1rem;
 
     & > h3 {
