@@ -2,7 +2,6 @@ import { ParallaxBanner } from 'react-scroll-parallax';
 import HeroName from './HeroName';
 import { EmailSVG, GithubSVG, InstaSVG, LinkedInSVG } from '../svgs/icons';
 
-
 const HeroBanner = () => {
   return (
     <ParallaxBanner className='hero-banner' layers={[

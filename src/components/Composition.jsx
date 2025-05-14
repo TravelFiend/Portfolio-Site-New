@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Composition = ({ pic1, pic2, pic3 }) => {
   return (
     <div className="composition">
@@ -11,6 +13,21 @@ const Composition = ({ pic1, pic2, pic3 }) => {
       ))}
     </div>
   );
+};
+
+Composition.propTypes = {
+  pic1: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired
+  }).isRequired,
+  pic2: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired
+  }).isRequired,
+  pic3: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default Composition;
