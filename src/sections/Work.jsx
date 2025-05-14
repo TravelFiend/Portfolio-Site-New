@@ -21,7 +21,7 @@ const workItems = [
     linkText: 'NMConnect',
     image: '/assets/nmConnect.png',
     url: 'https://nmcrisisline.com/nmconnect-app/',
-    description: ''
+    description: 'Quit your bitchin\'',
   }
 ];
 
@@ -30,13 +30,13 @@ const projectItems = [
     linkText: 'CovrLettr',
     image: '/assets/covrLettr.jpg',
     url: 'https://covrlettr.netlify.app/userauth',
-    description: '',
+    description: 'Letters Losers',
     repoUrl: 'https://github.com/covrLettr'
   }, {
     linkText: 'KIT (Keep In Touch)',
     image: '/assets/kit.jpg',
     url: 'https://friendlier-staging.netlify.app/about',
-    description: '',
+    description: 'Phone Phucker',
     repoUrl: 'https://github.com/band-m'
   }, {
     linkText: 'Notable Notes',
@@ -48,7 +48,7 @@ const projectItems = [
     linkText: 'Offbeat',
     image: '/assets/offbeat.png',
     url: 'https://travelfiend.github.io/offbeat/',
-    description: '',
+    description: 'Beats bitch',
     repoUrl: 'https://github.com/TravelFiend/offbeat'
   }
 ];
