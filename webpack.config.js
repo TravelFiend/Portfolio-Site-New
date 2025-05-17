@@ -17,7 +17,7 @@ const config = {
     clean: true
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html'}),
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
     new DotEnv({ systemvars: true }),
     new CopyPlugin({ patterns: [{ from: 'public' }] })
   ],
@@ -50,10 +50,12 @@ const config = {
         ]
       },
       {
-        test: /\.(jpeg|jpg|png|svg|pdf)$/,
-        use: {
-          loader: 'file-loader?name=.public/assets/images/[name].[ext]'
-        },
+        test: /\.(jpeg|jpg|png|svg|webp|pdf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+          publicPath: '/'
+        }
       }
     ]
   },

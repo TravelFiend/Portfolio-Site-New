@@ -7,11 +7,12 @@ const HeroName = () => {
 
   return (
     <>
-      {width >= 850 ? <NameBig />
-      : width < 850 && width > 600 ? <NameRegular />
-      : <NameSmall /> }
+      {width >= 850
+        ? <NameBig />
+        : width < 850 && width > 640 ? <NameRegular />
+          : <NameSmall /> }
     </>
-  )
+  );
 };
 
 export default HeroName;

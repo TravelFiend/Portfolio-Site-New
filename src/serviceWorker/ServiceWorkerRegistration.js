@@ -14,10 +14,10 @@ const registerServiceWorker = () => {
           window.location.reload();
         }
       }
-    })
+    });
 
     wb.register();
   }
-}
+};
 
 export default registerServiceWorker;

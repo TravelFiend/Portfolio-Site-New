@@ -1,0 +1,119 @@
+.workItems {
+  display: flex;
+  flex-direction: column;
+
+  & > h2 {
+    font-size: 6rem;
+    color: $color-primary;
+    font-family: $font-secondary;
+    text-align: center;
+    margin-top: 5rem;
+    filter: drop-shadow(0 0 .5rem $color-tertiary);
+
+    @include respond-to('xs') {
+      font-size: 3.5rem;
+      margin: 2rem 0;
+    }
+  }
+
+  & > div {
+    padding: 0 5rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    height: contain;
+
+    @include respond-to('md') {
+      padding: 0 3rem 10rem;
+      grid-template-columns: 1fr;
+    }
+
+    & > div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    width: 85%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond-to('xs') {
+      width: 100%;
+    }
+
+    & > a {
+      display: flex;
+      align-items: center;
+
+      & > img {
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover{
+          box-shadow: 0 0 1rem $color-tertiary;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: $color-white;
+      font-size: 3rem;
+      font-family: $font-secondary;
+      text-align: center;
+      padding: 4rem 0;
+      margin-top: 5rem;
+      transition: all 0.3s ease;
+
+
+      & > a,
+      & > div {
+        display: flex;
+        cursor: pointer;
+      }
+
+      & > a > svg,
+      & > div > svg {
+        height: 4rem;
+        margin-left: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          scale: 1.2;
+          transition: all 0.3s ease;
+        }
+
+        & > g > g > path {
+          fill: $color-white;
+        }
+
+        @include respond-to('xxs') {
+          height: 3rem;
+        }
+      }
+
+      @include respond-to('xs') {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        padding: 2rem 0;
+      }
+    }
+  }
+}

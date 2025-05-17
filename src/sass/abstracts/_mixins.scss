@@ -1,7 +1,30 @@
+$breakpoints: (
+  'xxs': ( max-width: 460px ),
+  'xs': ( max-width: 640px ),
+  'sm': ( max-width: 768px ),
+  'md': ( max-width: 1024px ),
+  'lg': ( max-width: 1280px ),
+  'xl': ( max-width: 1535px ),
+  '2xl': ( min-width: 1536px )
+) !default;
+
 @mixin clearfix {
   &::after {
     content: '';
     display: table;
     clear: both;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }

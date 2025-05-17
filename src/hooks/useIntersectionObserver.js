@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-const useIntersectionObserver = ({ root = null, rootMargin, threshold = 0}) => {
+const useIntersectionObserver = ({ root = null, rootMargin, threshold = 0 }) => {
   const [entry, setEntry] = useState({});
   const [node, setNode] = useState(null);
   const observer = useRef(null);
@@ -10,7 +10,7 @@ const useIntersectionObserver = ({ root = null, rootMargin, threshold = 0}) => {
       observer.current.disconnect();
     }
 
-    observer.current = new window.IntersectionObserver(([entry]) => setEntry(entry), {root, rootMargin, threshold})
+    observer.current = new window.IntersectionObserver(([entry]) => setEntry(entry), { root, rootMargin, threshold });
 
     const { current: currentObserver } = observer;
 
@@ -22,6 +22,6 @@ const useIntersectionObserver = ({ root = null, rootMargin, threshold = 0}) => {
   }, [node, root, rootMargin, threshold]);
 
   return { entry, setNode };
-}
+};
 
 export default useIntersectionObserver;

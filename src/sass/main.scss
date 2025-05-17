@@ -1,5 +1,6 @@
 @import 'abstracts/animations';
 @import 'abstracts/display';
+@import 'abstracts/mixins';
 @import 'abstracts/variables';
 
 @import 'base/base';
@@ -10,7 +11,9 @@
 @import 'components/composition';
 @import 'components/heroBanner';
 @import 'components/heroImages';
+@import 'components/projectInfoModule';
 @import 'components/socialMenu';
 @import 'components/textBlock';
+@import 'components/workItems';
 
 @import 'sections/allSections';
