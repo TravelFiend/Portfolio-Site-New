@@ -22,6 +22,7 @@
     position: relative;
     width: 80%;
     height: fit-content;
+    max-height: 90%;
     display: flex;
     flex-direction: column;
     background-color: $color-primary-dark;
@@ -40,21 +41,26 @@
       border-bottom: .1rem solid $color-white;
 
       @include respond-to('xxs') {
+        padding-bottom: 1rem;
         font-size: 2.4rem;
       }
     }
 
-    & > p {
-      overflow-y: auto;
-      padding: 3rem 1rem 1rem;
-      color: $color-white;
-      font-size: 1.6rem;
-      font-family: $font-primary;
-      text-align: center;
-      text-decoration: none;
+    & > div {
+      overflow-y: scroll;
+      z-index: 20;
 
-      &::-webkit-scrollbar {
-        display: none;
+      & > p {
+        padding: 3rem 1rem 1rem;
+        color: $color-white;
+        font-size: 1.6rem;
+        font-family: $font-primary;
+        text-align: center;
+        text-decoration: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
 

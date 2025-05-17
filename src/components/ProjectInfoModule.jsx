@@ -7,11 +7,13 @@ const ProjectInfoModule = ({ projectName, description, closeModule }) => {
 
       <div className="project-info__content">
         <h3>{projectName}</h3>
-        {description.split('\n').map((line, index) => (
-          <p key={index}>
-            {line}
-          </p>
-        ))}
+        <div onClick={closeModule}>
+          {description.split('\n').map((line, index) => (
+            <p key={index}>
+              {line}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
