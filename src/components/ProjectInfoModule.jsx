@@ -12,7 +12,6 @@ const ProjectInfoModule = ({ projectName, description, closeModule }) => {
             {line}
           </p>
         ))}
-        {/* <p>{description}</p> */}
       </div>
     </div>
   );

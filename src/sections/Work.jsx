@@ -63,7 +63,10 @@ const Work = () => {
     <section id="work" className="section-work">
       <WorkItems workItems={workItems} title="Professional Work" />
       <div className="work-text">
-        <TextBlock header="Stuff I'm working on" description="Talk about the tech being used in current side projects" />
+        <TextBlock
+          header="Side Projects"
+          description="Recently my focus has been on building a site centered around music and art.  I've built a template using Next.js, Sanity.io for CMS, and Tailwind CSS.  I've gotten a robust CI/CD pipeline setup using Github Actions, automatically checking for linting errors and running tests on every push. I've also set up actions to automatically deploy to Vercel and Sanity staging/production environments, depending on whether it's a new PR or a push to main.<br /><br />Besides this, I've gotten husky set up to check for linting errors before a commit can even be completed, saving time for new devs who might not know the specific rules set up by any given client.  I've also gotten some Sanity schemas with corresponding React components that can be tweaked as needed for a sepecific project.<br /><br />All of this work is on a private repo on Github (yes, my github action allows me to automate Vercel deployments, even with a private repo.  I will happily grant temporary read access to share this work with any potential hiring manager or teammates, just shoot me an email, text, or Instagram message with any requests and I'll make it happen!  I also have a few other projects that I've worked on in the past that are listed below."
+        />
       </div>
       <WorkItems workItems={projectItems} title="Personal Projects" />
     </section>

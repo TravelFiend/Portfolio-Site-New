@@ -45,7 +45,6 @@
     }
 
     & > p {
-      height: 85%;
       overflow-y: auto;
       padding: 3rem 1rem 1rem;
       color: $color-white;
@@ -60,13 +59,11 @@
     }
 
     @include respond-to('md') {
-      padding: 1rem;
-      width: 85%;
-      height: 85%;
+      padding: 4rem;
     }
     @include respond-to('sm') {
       width: 90%;
-      height: 90%;
+      padding: 2rem 0.5rem;
     }
   }
 }

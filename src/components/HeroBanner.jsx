@@ -6,11 +6,11 @@ const HeroBanner = () => {
   return (
     <ParallaxBanner className='hero-banner' layers={[
       {
-        image: 'assets/milkyWay.jpg',
+        image: 'assets/milkyWay.webp',
         amount: -0.15
       },
       {
-        image: 'assets/rocks.png',
+        image: 'assets/rocks.webp',
         amount: 0.2
       }]} style={{ height: '86vh' }}
     >

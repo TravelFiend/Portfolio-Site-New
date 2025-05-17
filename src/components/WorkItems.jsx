@@ -28,11 +28,11 @@ const WorkItems = ({ title, workItems }) => {
                     <InfoButton />
                   </div>
 
-                  <a href={repoUrl ? repoUrl : url} target="_blank" rel="noopener noreferrer">
-                    {repoUrl ? (
+                  {repoUrl ? (
+                    <a href={repoUrl} target="_blank" rel="noopener noreferrer">
                       <GithubButton />
-                    ) : null}
-                  </a>
+                    </a>
+                  ) : null}
                 </div>
 
                 <a href={url} target="_blank" rel="noopener noreferrer">

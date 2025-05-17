@@ -22,7 +22,6 @@ import tailwind from '../../public/assets/tailwind.png';
 import travis from '../../public/assets/travis.png';
 import { useEffect, useRef, useState } from 'react';
 
-
 const Technologies = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const techRef = useRef(null);
