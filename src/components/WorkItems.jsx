@@ -36,7 +36,13 @@ const WorkItems = ({ title, workItems }) => {
                 </div>
 
                 <a href={url} target="_blank" rel="noopener noreferrer">
-                  <img src={image} alt={linkText} />
+                  <picture
+                    key={linkText}
+                  >
+                    <source srcSet={`/assets/${image}.webp`} type="image/webp" />
+                    <source srcSet={`/assets/${image}.jpg`} type="image/jpeg" />
+                    <img src={`/assets/${image}.jpg`} alt={`Screenshot of ${linkText} site`} />
+                  </picture>
                 </a>
               </div>
             </div>
