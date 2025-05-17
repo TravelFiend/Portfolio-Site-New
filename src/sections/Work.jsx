@@ -6,31 +6,34 @@ const workItems = [
     linkText: 'Schoolhouse',
     image: '/assets/schoolhouse-homepage.png',
     url: 'https://www.schoolhouse.com/',
-    description: `Shopify Liquid - CSS - JavaScript - jQuery - Shopify API - GraphQL - PHP - Ruby - Python
-    I worked as a full-stack developer for Schoolhouse, a Shopify Plus store.  My main focus eventually shifted to the front-end of the site, but I also worked with the back-end team to help build out new features and fix bugs for the reporting team.  I was responsible for building out new pages, fixing bugs, implementing new features, and integrating third party apps.
-    **1 of the 3 brands that we eventually migrated to a headless CMS (Next.js - Tailwind CSS - Sanity.io - AWS).  For this we built a monorepo with both shared and individual configurations per brand.  I built highly reusable components that could be shared between the 3 brands.**`,
-  }, {
+    description: `Shopify Liquid, CSS, JavaScript, jQuery, Shopify API, GraphQL, PHP, Ruby, Python
+    As a full-stack developer for Schoolhouse, a Shopify Plus store, I initially contributed to both front-end and back-end development. My role later focused on front-end tasks, where I built new pages, resolved bugs, implemented features, and integrated third-party apps. I also collaborated with the back-end team to enhance reporting features and address technical issues.
+    **One of three brands migrated to a headless CMS (Next.js, Tailwind CSS, Sanity.io, AWS). I helped architect a monorepo with shared and brand-specific configurations, designing highly reusable components to streamline development across all three brands.**`
+  },
+  {
     linkText: 'Food52',
     image: '/assets/food52-homepage.png',
     url: 'https://www.food52.com/',
-    description: `React - CSS - JavaScript - GraphQL - Ruby
-    I worked as a front-end developer for Schoolhouse, a Shopify Plus store.  My main focus was on the front-end of the site, but I also worked with the back-end team to help build out new features and fix bugs for the reporting team.  I was responsible for building out new pages, fixing bugs, implementing new features, and integrating third party apps.
-    **1 of the 3 brands that we eventually migrated to a headless CMS (Next.js - Tailwind CSS - Sanity.io - AWS).  For this we built a monorepo with both shared and individual configurations per brand.  I built highly reusable components that could be shared between the 3 brands.**`,
-  }, {
+    description: `React, CSS, JavaScript, GraphQL, Ruby
+    At Food52, following their acquisition of Schoolhouse, I focused primarily on front-end development within a larger, structured team. My responsibilities included building new pages, fixing bugs, and implementing features. Working with a complex legacy codebase and a custom-built CMS, I gained valuable experience mastering advanced concepts and navigating intricate systems.
+    **One of three brands migrated to a headless CMS (Next.js, Tailwind CSS, Sanity.io, AWS). I contributed to a monorepo with shared and brand-specific configurations, creating reusable components to ensure consistency and efficiency across all three brands.**`
+  },
+  {
     linkText: 'Dansk',
     image: '/assets/dansk-homepage.png',
     url: 'https://www.dansk.com/',
-    description: `Shopify Liquid - HTML - CSS - JavaScript - jQuery - Shopify API - GraphQL - PHP - Ruby - Python
-    I worked as a front-end developer for Schoolhouse, a Shopify Plus store.  My main focus was on the front-end of the site, but I also worked with the back-end team to help build out new features and fix bugs for the reporting team.  I was responsible for building out new pages, fixing bugs, implementing new features, and integrating third party apps.
-    **1 of the 3 brands that we eventually migrated to a headless CMS (Next.js - Tailwind CSS - Sanity.io - AWS).  For this we built a monorepo with both shared and individual configurations per brand.  I built highly reusable components that could be shared between the 3 brands.**`,
-  }, {
+    description: `Shopify Liquid, CSS, JavaScript, jQuery, Shopify API
+    While at Schoolhouse/Food52, I contributed to Dansk, a smaller-scale project. My role involved resolving bugs, applying minor styling adjustments, and ensuring compliance with regulations such as CCPA, GDPR, and ADA standards, keeping the site accessible and up to date.
+    **One of three brands migrated to a headless CMS (Next.js, Tailwind CSS, Sanity.io, AWS). I helped develop a monorepo with shared and brand-specific configurations, building reusable components to support seamless development across all three brands.**`
+  },
+  {
     linkText: 'NMConnect',
     image: '/assets/nmConnect.png',
     url: 'https://nmcrisisline.com/nmconnect-app/',
-    description: `React - React Native Expo - Node.js - MongoDB - Mongoose - Express - Jest
-    An app for the State of New Mexico that provides easy-access buttons to contact the New Mexico Crisis and Access Line (NMCAL) via phone or text.  The app also provides mental health/suicide prevention resources, as well as a COVID-19 info section and a podcast section.  This project was built by myself and 1 other developer and is continuing to grow in size due to interest from other governmental departments in New Mexico.  Available now on the Apple Store and the Google Play Store!`,
+    description: `React, React Native Expo, Node.js, MongoDB, Mongoose, Express, Jest
+    I co-developed NMConnect, a mobile app for the State of New Mexico, with one other developer. The app provides quick-access buttons to contact the New Mexico Crisis and Access Line (NMCAL) via phone or text, alongside mental health resources, suicide prevention tools, COVID-19 information, and a podcast section. Due to growing interest from other New Mexico government departments, the app continues to expand. It’s available on the Apple App Store and Google Play Store.`
   }
-];
+]
 
 const projectItems = [
   {
