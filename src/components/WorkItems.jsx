@@ -36,7 +36,6 @@ const WorkItems = ({ title, workItems }) => {
                 </div>
 
                 <a href={url} target="_blank" rel="noopener noreferrer">
-                  {/* <img src={image} alt={linkText} /> */}
                   <picture
                     key={linkText}
                   >
