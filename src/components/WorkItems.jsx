@@ -29,7 +29,7 @@ const WorkItems = ({ title, workItems }) => {
                   </div>
 
                   {repoUrl ? (
-                    <a href={repoUrl} target="_blank" rel="noopener noreferrer">
+                    <a href={repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`View the source code for ${linkText}`}>
                       <GithubButton />
                     </a>
                   ) : null}
