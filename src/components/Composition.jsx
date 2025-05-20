@@ -10,7 +10,12 @@ const Composition = ({ pic1, pic2, pic3 }) => {
         >
           <source srcSet={`/assets/${image}.webp`} type="image/webp" />
           <source srcSet={`/assets/${image}.jpg`} type="image/jpeg" />
-          <img className={`composition__image composition__photo--p${idx + 1}`} src={`/assets/${image}.jpg`} alt={alt} />
+          <img
+            className={`composition__image composition__photo--p${idx + 1}`}
+            src={`/assets/${image}.jpg`}
+            alt={alt}
+            loading="lazy"
+          />
         </picture>
       ))}
     </div>

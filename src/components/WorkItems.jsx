@@ -41,7 +41,11 @@ const WorkItems = ({ title, workItems }) => {
                   >
                     <source srcSet={`/assets/${image}.webp`} type="image/webp" />
                     <source srcSet={`/assets/${image}.jpg`} type="image/jpeg" />
-                    <img src={`/assets/${image}.jpg`} alt={`Screenshot of ${linkText} site`} />
+                    <img
+                      src={`/assets/${image}.jpg`}
+                      alt={`Screenshot of ${linkText} site`}
+                      loading="lazy"
+                    />
                   </picture>
                 </a>
               </div>
