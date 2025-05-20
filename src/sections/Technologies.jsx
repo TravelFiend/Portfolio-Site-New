@@ -1,5 +1,5 @@
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import html from '../../public/assets/html5.png';
+import html5 from '../../public/assets/html5.png';
 import css from '../../public/assets/css.png';
 import js from '../../public/assets/js.png';
 import node from '../../public/assets/node.png';
@@ -40,7 +40,7 @@ const Technologies = () => {
   }, [entry.isIntersecting, hasAnimated, setNode]);
 
   const techIcons = [
-    { icon: html, text: 'HTML' },
+    { icon: html5, text: 'HTML' },
     { icon: css, text: 'CSS' },
     { icon: js, text: 'Javascript' },
     { icon: node, text: 'Node.js' },
@@ -68,6 +68,11 @@ const Technologies = () => {
       {techIcons.map(({ icon, text }, index) => {
         return (
           <div key={index}>
+            {/* <picture style={{ animationDelay: `${index * .06}s` }}>
+              <source srcSet={`/assets/${icon}.webp`} type="image/webp" />
+              <source srcSet={`/assets/${icon}.png`} type="image/png" />
+              <img src={`/assets/${icon}.png`} alt={`${text} icon`} loading="lazy" />
+            </picture> */}
             <img
               src={icon}
               alt={`${text} icon`}

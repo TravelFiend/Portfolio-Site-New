@@ -79,7 +79,7 @@
     & div {
       padding: .5rem;
 
-      & img {
+      & > img {
         height: 10rem;
         padding: 1.4rem;
         filter: drop-shadow(0 0 .75rem $color-primary);
