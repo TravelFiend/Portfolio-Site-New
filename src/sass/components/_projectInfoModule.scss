@@ -47,7 +47,9 @@
     }
 
     & > div {
-      overflow-y: scroll;
+      overflow-y: auto;
+      scrollbar-color: $color-white red;
+      scrollbar-width: thin;
       z-index: 20;
 
       & > p {
