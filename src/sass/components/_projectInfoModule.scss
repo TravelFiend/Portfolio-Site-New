@@ -41,8 +41,10 @@
       color: $color-white;
       border-bottom: .1rem solid $color-white;
 
-      @include respond-to('xxs') {
+      @include respond-to('sm') {
         padding-bottom: 2rem;
+      }
+      @include respond-to('xxs') {
         font-size: 2.4rem;
       }
     }
