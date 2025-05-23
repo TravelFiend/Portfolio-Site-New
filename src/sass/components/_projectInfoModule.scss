@@ -48,7 +48,7 @@
 
     & > div {
       overflow-y: auto;
-      scrollbar-color: $color-white red;
+      scrollbar-color: $color-white $color-primary-dark;
       scrollbar-width: thin;
       z-index: 20;
 
