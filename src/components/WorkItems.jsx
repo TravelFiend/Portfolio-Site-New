@@ -7,7 +7,7 @@ const WorkItems = ({ title, workItems }) => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
-    <div className="workItems">
+    <div className="work-items">
       <h2>{title}</h2>
       <div>
         {workItems.map(({ linkText, image, url, repoUrl, description }) => (
@@ -21,7 +21,7 @@ const WorkItems = ({ title, workItems }) => {
             ) : null}
 
             <div>
-              <div className="workItems__item">
+              <div className="work-items__item">
                 <div>
                   <p>{linkText}</p>
                   <div onClick={() => setSelectedItem(linkText)}>

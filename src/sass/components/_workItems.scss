@@ -1,4 +1,4 @@
-.workItems {
+.work-items {
   display: flex;
   flex-direction: column;
 
@@ -111,7 +111,7 @@
 
       @include respond-to('xs') {
         font-size: 2.5rem;
-        margin-top: 1rem;
+        margin-top: 4rem;
         padding: 2rem 0;
       }
     }
