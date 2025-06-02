@@ -10,7 +10,6 @@ const Header = () => {
   const { isScrolled } = useScrollPosition(100);
   const [it, setIt] = useState(false);
   const { width } = useDimensions();
-  const renderCounter = useRef(0);
   const burger = useRef();
 
   useEffect(() => {
@@ -21,10 +20,6 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (renderCounter.current === 0) {
-      renderCounter.current = renderCounter.current + 1;
-    }
-
     return isScrolled ? setIt(true) : setIt(false);
   }, [isScrolled]);
 
